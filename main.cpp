@@ -1,5 +1,6 @@
 #include <iostream>
 #include "LinearSearch.hpp"
+#include "BinarySearch.hpp"
 
 int main() {
   unsigned int n;
@@ -20,8 +21,11 @@ int main() {
 
   std::cin >> x;
 
-  LinearSearch l;
-  int index = l.LinearSearchOnArray(arr, n, x);
+  // LinearSearch l;
+  // int index = l.LinearSearchOnArray(arr, n, x);
+
+  BinarySearch l;
+  int index = l.BinarySearchOnArray(arr, 0, n-1, x);
   if (index > -1) {
     std::cout << "Element found at position: " << index + 1 << std::endl;
   } else {
